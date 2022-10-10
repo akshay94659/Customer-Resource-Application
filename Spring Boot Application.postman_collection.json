@@ -21,13 +21,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/customers",
+					"raw": "https://customer-resource-management-p.herokuapp.com/customers/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"customer-resource-management-p",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
-						"customers"
+						"customers",
+						""
 					]
 				}
 			},
@@ -39,11 +42,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/customers/",
+					"raw": "https://customer-resource-management-p.herokuapp.com/customers/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"customer-resource-management-p",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"customers",
 						""
@@ -124,11 +129,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/customers/jokes",
+					"raw": "https://customer-resource-management-p.herokuapp.com/customers/jokes",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"customer-resource-management-p",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"customers",
 						"jokes"
@@ -139,9 +146,46 @@
 		},
 		{
 			"name": "Sample Post Request[For Testing]",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://httpbin.org/post",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					]
+				}
 			},
 			"response": []
 		},
